@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offest Tutorial</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .test {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      left: 100px;
+      top: 50px;
+      border: 5px solid black;
+      padding: 10px;
+      margin: 10px;
+    }
+  </style>
+  <body>
+    <div class="test">
+      <h3>Check Out The Offest Top and Left</h3>
+      <button onclick="text()">Check</button>
+      <p id="demo"></p>
+    </div>
+
+    <script>
+      function text() {
+        const div = document.querySelector(".test");
+        const demo = document.querySelector("#demo");
+
+        demo.innerHTML =
+          "Left: " +
+          div.offsetLeft +
+          "<br /> Top: " +
+          div.offsetTop +
+          "<br /> Height: " +
+          div.offsetHeight +
+          "<br /> Client Height " +
+          div.clientHeight;
+      }
+    </script>
+  </body>
+</html>

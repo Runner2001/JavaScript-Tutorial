@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body class="bg-violet-900 text-white">
+    <div
+      class="container h-screen mx-auto flex flex-col justify-center items-center"
+    >
+      <header class="text-center mb-[48px] w-[30%]">
+        <h3 class="text-3xl font-semibold mb-6">My ToDo List</h3>
+        <input
+          type="text"
+          name="search"
+          placeholder="Search Items"
+          value=""
+          class="text-lg search bg-violet-400 px-4 w-full py-2 placeholder:text-white"
+        />
+      </header>
+      <ul class="w-[30%] flex flex-col gap-y-4 mb-[48px] list"></ul>
+      <form class="items-center w-[30%] add">
+        <input
+          type="text"
+          name="new"
+          placeholder="Add New Items"
+          value=""
+          class="text-lg bg-violet-400 px-4 w-full py-2 placeholder:text-white"
+        />
+      </form>
+    </div>
+
+    <script src="./index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ba279620c0.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Offest</title>
+    <style>
+      .box {
+        width: 500px;
+        height: 400px;
+        background: #f2f2f2;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+      }
+      .secondbox {
+        width: 30px;
+        height: 30px;
+        background: lightseagreen;
+        position: absolute;
+        transition: 0.4s linear;
+        transform: translate(-50%, -50%);
+      }
+      .box:hover .secondbox {
+        width: 300%;
+        height: 300%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="secondbox"></div>
+    </div>
+    <script>
+      const box = document.querySelector(".box");
+      const secondbox = document.querySelector(".secondbox");
+
+      //   window.addEventListener("mousemove", (e) => {
+      //     const mousex = e.offsetX;
+      //     const mousey = e.offsetY;
+      //     console.log(mousex, mousey);
+      //     secondbox.style.top = mousey + "px";
+      //     secondbox.style.left = mousex + "px";
+      //   });
+
+      window.addEventListener("mousemove", (e) => {
+        const x = e.offsetX;
+        const y = e.offsetY;
+
+        secondbox.style.top = y + "px";
+        secondbox.style.left = x + "px";
+      });
+    </script>
+  </body>
+</html>
