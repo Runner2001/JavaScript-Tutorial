@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fire Base Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="container my-6 mx-auto flex flex-col justify-center">
+      <h3 class="mb-4 font-semibold text-blue-600 text-3xl">Recipes</h3>
+      <ul class="ml-3 list-disc w-[50%] flex flex-col gap-3"></ul>
+      <form class="mt-6">
+        <label for="recipe">Add new recipe</label>
+        <div class="input flex">
+          <input
+            type="text"
+            id="recipe"
+            required
+            class="px-4 py-3 bg-gray-200 w-[45%]"
+          />
+          <div class="submit">
+            <input
+              type="submit"
+              value="Add"
+              class="px-4 py-3 bg-blue-600 text-white font-semibold cursor-pointer"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyDncyudEBs9is-Mi4G4ZRPBZFrbhpHTci4",
+
+        authDomain: "fir-6991b.firebaseapp.com",
+
+        databaseURL: "https://fir-6991b-default-rtdb.firebaseio.com",
+
+        projectId: "fir-6991b",
+
+        storageBucket: "fir-6991b.appspot.com",
+
+        messagingSenderId: "653634211490",
+
+        appId: "1:653634211490:web:a4e4b6af1d9840d98c11fb",
+      };
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+    </script>
+    <script src="./Firebase.js"></script>
+  </body>
+</html>
