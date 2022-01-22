@@ -10,7 +10,7 @@
   </head>
   <body>
     <div
-      class="container mx-auto flex flex-col justify-center items-center h-screen text-center w-[90%] md:w-[70%] lg:w-[60%] bg-gray-100"
+      class="container py-8 mx-auto flex flex-col justify-center items-center text-center w-[90%] md:w-[70%] lg:w-[60%] bg-gray-100"
     >
       <!-- Header -->
       <h3 class="text-3xl mb-8">Future Chatting</h3>
@@ -20,38 +20,43 @@
       <div class="chaticons">
         <h3 class="text-xl mb-4">Choose a Chatroom :</h3>
         <button
-          class="px-4 py-3 bg-sky-500 rounded-md hover:bg-sky-300 text-white font-semibold"
+          id="general"
+          class="px-4 py-3 bg-sky-500 rounded-md hover:bg-sky-800 text-white font-semibold"
         >
-          #General
+          <i class="fas fa-th-large"></i>General
         </button>
         <button
-          class="px-4 py-3 bg-sky-500 rounded-md hover:bg-sky-300 text-white font-semibold"
+          id="gaming"
+          class="px-4 py-3 bg-sky-500 rounded-md hover:bg-sky-800 text-white font-semibold"
         >
-          #Gaming
+          <i class="fas fa-gamepad"></i>Gaming
         </button>
         <button
-          class="px-4 py-3 bg-sky-500 rounded-md hover:bg-sky-300 text-white font-semibold"
+          id="music"
+          class="px-4 py-3 bg-sky-500 rounded-md hover:bg-sky-800 text-white font-semibold"
         >
-          #Music
+          <i class="fas fa-music"></i>Music
         </button>
         <button
-          class="px-4 py-3 bg-sky-500 rounded-md hover:bg-sky-300 text-white font-semibold"
+          id="private"
+          class="px-4 py-3 bg-sky-500 rounded-md hover:bg-sky-800 text-white font-semibold"
         >
-          #Private
+          <i class="fas fa-user-lock"></i>Private
         </button>
       </div>
       <!-- Selecte Chatroom End -->
 
       <!-- Chat List -->
-      <div class="chatlist">
+      <div class="chatlist mt-6 w-[80%] lg:w-[55%]">
         <ul class="chat-list"></ul>
       </div>
       <!-- Chat list End -->
 
       <!-- Message Sent -->
-      <form class="Message mt-12">
+      <form class="Message mt-6">
         <input
           type="text"
+          id="message_add"
           placeholder="Your Message"
           class="px-4 py-3 bg-gray-300"
         />
@@ -64,10 +69,11 @@
       <!-- Message Sent End -->
 
       <!-- Name Change -->
-      <form class="Message mt-12">
+      <form class="Name mt-4">
         <input
           type="text"
           placeholder="Change Your Name"
+          id="namechange"
           class="px-4 py-3 bg-gray-300"
         />
         <input
@@ -75,13 +81,37 @@
           class="py-3 px-4 bg-sky-600 text-white font-semibold w-[100px]"
           value="Upadate"
         />
+        <h3 class="update mt-2"></h3>
       </form>
       <!-- Name Chage End -->
     </div>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyDncyudEBs9is-Mi4G4ZRPBZFrbhpHTci4",
 
+        authDomain: "fir-6991b.firebaseapp.com",
+
+        databaseURL: "https://fir-6991b-default-rtdb.firebaseio.com",
+
+        projectId: "fir-6991b",
+
+        storageBucket: "fir-6991b.appspot.com",
+
+        messagingSenderId: "653634211490",
+
+        appId: "1:653634211490:web:a4e4b6af1d9840d98c11fb",
+      };
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+    </script>
     <script
       src="https://kit.fontawesome.com/ba279620c0.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./ui.js"></script>
+    <script src="./chat.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>
