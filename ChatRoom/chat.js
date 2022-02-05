@@ -46,13 +46,3 @@ class Chat {
         this.unsub && this.unsub();
     }
 }
-
-
-// setTimeout(() => {
-//     chatroom.updateName("Yoshi");
-//     chatroom.updateRoom("gaming");
-//     chatroom.getChats(data => {
-//         console.log(data);
-//     });
-//     chatroom.addChat("Hello Gamers");
-// }, 3000)
